@@ -7,25 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Boyin Zhang's Website</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/mystyle.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/mystyle.css" rel="stylesheet">
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#myScrollspy" data-offset="200">
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">Boyin Zhang's Homepage</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav nav-stacked">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Course</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -42,12 +43,404 @@
       </div>
     </header>
     <div class="container">
-      <div class="row row-content">
-        <div class="col">
-          <h1 style="text-align:center">Welcome to my personal website! More details will be updated soon!</h1>
-          <h1 style="text-align:center">For now you can visit my github at: <a href="https://github.com/zhby99">https://github.com/zhby99</a></h1>
+      <div class="row">
+
+        <div class="col col-sm-10">
+          <div class="row row-content" id="about" name="introduction">
+            <div class="col-sm-8 col-sm-push-2">
+              <h3>Introduction</h3>
+              <p style="font-size:18px">Hello, I am Zhang Boyin, currently pursuing the MCS(Master of Computer Science) degree in UIUC(University of Illinois Urbana Champaign). My research interests are machine learning, deep learning and computer vision
+                 where I finished my senior thesis. However, as I am not planing to apply for PhD in current state, I will focus more
+                  on my engineering skills in order to find a job(For more details of this part,
+                  welcome to visit my github at <a href="https://github.com/zhby99">https://github.com/zhby99</a>). I like playing games, including DotA2 and Pokemon. I am looking forward to being friends with you! </p>
+            </div>
+            <div class="col-sm-2 col-sm-pull-8">
+              <img class="image-responsive" src="images/timg.jpeg" height=200 width=120>
+            </div>
+            <div class="col" style="padding:40px">
+            </div>
+          </div>
+          <div class="row row-content" id="project" name="project">
+            <div class="col">
+              <h3>My Projects</h3>
+              <div class="row row-content">
+                <div class="col-sm-10 col-push-2">
+                  <h4>Research Projects</h4>
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingOD">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#od"
+                            data-parent="accordion" aria-expanded="true" aria-controls="od">
+                            Applying SSD to High Resolution Image Detection&nbsp;&nbsp; <small>August,2016-January,2017</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse in" id="od" aria-labelledby="headingOD">
+                        <div class="panel-body">
+                          <p>
+                            This is my senior thesis project supervised by Professor Svetlana Lazebnik, which is focusing on applying the state-of-art object detection algorithm SSD(Single-Shot-Detection)
+                            to solve the object detection problems on high resolution images. The first version of this model was using the sliding window method combining
+                            with SSD prediction model to do the detection, NMS(non-maximum suppression) algorithm was used to remove the replicate detection. The advanced version
+                            was using the AZ-net(adjacency and zoom in net) to reduce the number of detections by SSD, which accelerate the detection processes by the model.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingIR">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#ir"
+                            data-parent="accordion" aria-expanded="true" aria-controls="ir">
+                            Applying Deep Learning to Information Retrivel&nbsp;&nbsp; <small>August-December,2016</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse" id="ir" aria-labelledby="headingIR">
+                        <div class="panel-body">
+                          <p>
+                            This research project was more about thinking. I worked with my friend Dajun Xu and PhD student Long Pham, supervised by Professor Kevin Chang.
+                            In the first period of this project, I came up with the idea of the BitMap(using the grid system to get the embedding of a webpage). Then I implemented the part of
+                            constructing the BitMap according to the data that Dajun got. Then I also wrote the scirpt for training using the Deep Learning framework Tensorflow. The thing that
+                            we still do not finish is the dataset(usually for the model to train, we need at least thousand of labeled data). However, due to my
+                            health problem, I did not continue this project in Spring 2017.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingMarket">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#market"
+                            data-parent="accordion" aria-expanded="true" aria-controls="market">
+                            Equillibrium Market Model&nbsp;&nbsp; <small>June-July, 2016</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse" id="market" aria-labelledby="headingMarket">
+                        <div class="panel-body">
+                          <p>This was a work assigned by Professor Ruta Mehta, which was implemented in Python. In this project, I studied the knowledge
+                             of game theory(about allocating the source and biding). Then following the guidance of Professor Mehta, I implemented the model
+                             to predict the behaviors and gross capital changes in free market economy and in central economy.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingSpatial">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#spatial"
+                            data-parent="accordion" aria-expanded="true" aria-controls="spatial">
+                            Combination of Spatial Transform Network and Active Shape Model&nbsp;&nbsp; <small>April-June, 2016</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse" id="spatial" aria-labelledby="headingSpatial">
+                        <div class="panel-body">
+                          <p>Co-worked with PhD student Zengming Shen, combined the Spatial Transform Network to Caffe then used the model to
+                            do semantic segmentation on medicine photos. In this project, I began my journey on researches, started to read paper
+                            about the state-of-art technologies. I really appreciate Zengming for letting me working with him together.
+                            Following the guidance of him, I watched the Stanford course cs231n(Convolutional Neural Network) which gave me a
+                            good picture on how to start to learn deep learning. Also, during this project, I self-studied the deep learning
+                            library Caffe. At the begining, I encounted many difficulties as Caffe was quite a large framework written in C++,
+                            using many C++11/C++13 rules that I did not studied before. During the studying process, I could manage to understand
+                            the source code of Caffe and used it as the tool to train the neural networks.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:30px">
+
+                    </div>
+
+                  </div>
+                  <h4>Other Projects</h4>
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingSp">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#sp"
+                            data-parent="accordion" aria-expanded="true" aria-controls="sp">
+                            Splendor: Board Game&nbsp;&nbsp; <small>April,2017-May,2017</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse in" id="sp" aria-labelledby="headingSp">
+                        <div class="panel-body">
+                          <p>
+                            Splendor is a famour board game among the university students. As we played this game many times during the semester, we came up with the idea to implement it in Java.
+                            This is totally a software project. The first version is the final project of CS242(Programming Studio) which is implemented in Java, in which I implemented
+                             the game logic, game loop, networking as well as the replay mode. The work was splited into 4 weeks, and in each week we wrote the codes and the tests for our program.
+                             After that, I deployed it into android, where I practiced my skill on writing the android layout code and also the controller of android activities and intents. After that, I also
+                             re-implemented the game in Kotlin, which was the new language anounced to support android.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingStock">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#st"
+                            data-parent="accordion" aria-expanded="true" aria-controls="st">
+                            Stock Price Prediction Model in LSTM&nbsp;&nbsp; <small>June-August,2016</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse" id="st" aria-labelledby="headingStock">
+                        <div class="panel-body">
+                          <p>
+                            This is a script wroten in Python to predict the S&amp;P500 index of next day.
+                            The prediction model is trained by the LSTM network in Keras on Tensorflow. The traning data is the close price of S&amp;P500 of each day,
+                             and every 23 days form a group where the first 22 days are the parameters and the 23th price is the groundtruth for the prediction. For now the model
+                              has a correctness of 80% on predicting the single day's change based on the previous 22 days' data. This is my first trial on using machine learning on finance,
+                              as this is something really interested to me, I would try more different models and other hypo-parameters in the near future.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingWD">
+                        <h5 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#wd"
+                            data-parent="accordion" aria-expanded="true" aria-controls="wd">
+                            Web Data View Extension&nbsp;&nbsp; <small>June-August,2016</small>
+                          </a>
+                        </h5>
+                      </div>
+                      <div role="tabpanel" class="panel-collapse collapse" id="wd" aria-labelledby="headingWD">
+                        <div class="panel-body">
+                          <p>
+                            This is the course project of CS412(Data Mining), in which we implemented a javascript extension of Chrome to extract information from Youtube.
+                            We implemented 3 different algorithms, including K-Means, Distant Comparing and Naive Bayes. Among these 3 methods, we found that the distance method and the Naive Bayes Model could give
+                             better results. Also we add the function for extract the visual blocks highlightened by our model to csv files which could be used for analysis in future.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
+        <div class="row row-content" id="course">
+          <div class="col-sm-10">
+            <h3>My Courses</h3>
+            <ul class="nav nav-tabs" rol="tablist">
+
+              <li role="presentation" class="active">
+                <a href="#cs241" aria-controls="cs241" role="tab" data-toggle="tab">
+                  CS241
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#cs242" aria-controls="cs242" role="tab" data-toggle="tab">
+                  CS242
+                </a>
+              </li>
+              <li role="presentation" class>
+                <a href="#cs374" aria-controls="cs374" role="tab" data-toggle="tab">
+                  CS374
+                </a>
+              </li>
+              <li role="presentation" class>
+                <a href="#cs412" aria-controls="cs412" role="tab" data-toggle="tab">
+                  CS412
+                </a>
+              </li>
+              <li role="presentation" class>
+                <a href="#cs421" aria-controls="cs421" role="tab" data-toggle="tab">
+                  CS421
+                </a>
+              </li>
+              <li role="presentation" class>
+                <a href="#cs446" aria-controls="cs446" role="tab" data-toggle="tab">
+                  CS446
+                </a>
+              </li>
+              <li role="presentation" class>
+                <a href="#cs450" aria-controls="cs450" role="tab" data-toggle="tab">
+                  CS450
+                </a>
+              </li>
+              <li role="presentation" class>
+                <a href="#cs473" aria-controls="cs473" role="tab" data-toggle="tab">
+                  CS473
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade in active" role="tabpanel" id="cs241">
+                <h4>CS241 <small>System Programming</small></h4>
+                <middle>Grade: A</middle>
+                <p>Introduction course of system programming, studied the concept of thread, process, synchronize, networking and file system.
+                The assignments of this course were finished in C, including many interesting implementations such as malloc and shell.</p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs242">
+                <h4>CS242 <small>Programming Studio</small></h4>
+                <middle>Grade: A</middle>
+                <p>The programming studio course where I did many projects. The first project is implementing Chess in Java, including the game logic and gui. The second project is about scraping the film data from wikipedia, and then process as well as anaylze the data using python scripts
+                 The third project of the course is to write a webpage of our assignments, the front end was written by html, css in bootstrap and the backend was in python Flask. The final project of the course was the implementation of <a href="#sp">Splendor</a></p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs374">
+                <h4>CS241 <small>Algorithms&amp;Computation Models</small></h4>
+                <middle>Grade: A</middle>
+                <p>Introduction course to algorithms and computational models, including regular expression, DFA, NFA, CFG, Turing Machine, Divide and Conquer, DP, Greedy, Graph algorithms and NP/NP-hard/NP-complete problems</p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs412">
+                  <h4>CS412 <small>Data Mining</small></h4>
+                  <middle>Grade: A</middle>
+                  <p>Introduction course to data mining, including datawarehouse, pattern finding, clustering and classification.</p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs421">
+                  <h4>CS421 <small>Programming Language and Compiler</small></h4>
+                  <middle>Grade: A+</middle>
+                  <p>Introduce the functional programming language(Haskell), and many concepts including tail recurrsion, continue programming style and so on. Build a simple compiler using Haskell in the machine problems of this course</p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs446">
+                  <h4>CS446 <small>Machine Learning</small></h4>
+                  <middle>Grade: A+</middle>
+                  <p>Introduction course of Machine Learning, basic concepts including Perceptron, Winnow algorithms, Stochastic Gradient Descent algortihm, Kernel Methods, Support Vector Machine, Neural Network and also computational Machine Learning.</p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs450">
+                  <h4>CS450 <small>Numerical Analysis</small></h4>
+                  <middle>Grade: A</middle>
+                  <p>The upper course of CS357(Numerical Method), topics including numerical algorithms for linear algebra, regression, optimization, difference/integral, normal/partial differential equations.</p>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs473">
+                  <h4>CS473 <small>Theory 2</small></h4>
+                  <middle>Grade: A+</middle>
+                  <p>Advanced algorithm course, topics including advanced dynamic programming, graph theory, netflow algorithms, matching problems, linear programming and NP-hard problems.</p>
+              </div>
+
+            </div>
+
+            <h3>Future Courses</h3>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#cs425" aria-controls="cs425" role="tab" data-toggle="tab">
+                  CS425
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#cs447" aria-controls="cs447" role="tab" data-toggle="tab">
+                  CS447
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#cs598ss" aria-controls="cs598ss" role="tab" data-toggle="tab">
+                  CS598SS
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#cs598tel" aria-controls="cs598tel" role="tab" data-toggle="tab">
+                  CS598TEL
+                </a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade in active" role="tabpanel" id="cs425">
+                <h4>CS425 <small>Distributed System</small></h4>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs447">
+                <h4>CS447 <small>Introduction to Natural Language Processing</small></h4>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs598ss">
+                <h4>CS598SS <small>Advanced Bioinformatics</small></h4>
+              </div>
+              <div class="tab-pane fade" role="tabpanel" id="cs598tel">
+                <h4>CS598TEL <small>Machine Learning Theory</small></h4>
+              </div>
+
+            </div>
+          </div>
       </div>
+      <div class="row row-content" id="contact">
+        <div class="col-sm-10">
+          <h3>Contact Me</h3>
+          <div class="row row-content">
+              <div class="col-xs-12 col-sm-9">
+                <form class="form-horizontal" role="form">
+                   <div class="form-group">
+                       <label for="firstname" class="col-sm-2 control-label">First Name</label>                        <div class="col-sm-10">
+                       <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name">
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+                       <div class="col-sm-10">
+                           <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
+                       </div>
+                   </div>
+                   <div class="form-group">
+                          <label for="telnum" class="col-xs-12 col-sm-2 control-label">Contact Tel.</label>
+                          <div class="col-xs-5 col-sm-4 col-md-3">
+                              <div class="input-group">
+                                  <div class="input-group-addon">(</div>
+                                      <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
+                                  <div class="input-group-addon">)</div>
+                              </div>
+                          </div>
+                          <div class="col-xs-7 col-sm-6 col-md-7">
+                                      <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="emailid" class="col-sm-2 control-label">Email</label>
+                          <div class="col-sm-10">
+                              <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                         <div class="checkbox col-sm-5 col-sm-offset-2">
+                              <label class="checkbox-inline">
+                                  <input type="checkbox" name="approve" value="">
+                                  <strong>May we contact you?</strong>
+                              </label>
+                          </div>
+                          <div class="col-sm-3 col-sm-offset-1">
+                              <select class="form-control">
+                                  <option>Tel.</option>
+                                  <option>Email</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="feedback" class="col-sm-2 control-label">Your Feedback</label>
+                          <div class="col-sm-10">
+                              <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-primary">Send Feedback</button>
+                          </div>
+                      </div>
+               </form>
+              </div>
+               <div class="col-xs-12 col-sm-3">
+                  <p style="padding:20px;"></p>
+              </div>
+         </div>
+        </div>
+
+      </div>
+      </div>
+      <nav class="hidden-xs col-sm-2" id="myScrollspy">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="400">
+            <li><a href="#about">Introduction</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
     <footer>
       <div class="container">
@@ -56,10 +449,10 @@
             <h5>Links</h5>
             <ul class="list-unstyled">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Project</a></li>
-              <li><a href="#">Course</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#project">Project</a></li>
+              <li><a href="#course">Course</a></li>
+              <li><a href="#contact">Contact</a></li>
               <li><a href="https://github.com/zhby99">Github</a></li>
             </ul>
           </div>
@@ -87,8 +480,10 @@
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
